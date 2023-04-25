@@ -20,6 +20,6 @@ module.exports = async function askGPT(messages) {
     return assistantReply;
   } catch (error) {
     console.error('Error while calling GPT-4:', error);
-    return 'An error occurred.';
+    return 'An error occurred. Make sure the spreadsheet isn\'t larger than the OpenAI API token limit. Consider using the <code>gpt-4<code> model instead.';
   }
 };
