@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSV Analyzer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <style>
+      .loader {
+        display: none;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+      <h1 class="text-4xl font-semibold mb-4">Upload a CSV file</h1>
+      <form
+        id="upload-form"
+        action="/upload"
+        method="post"
+        enctype="multipart/form-data"
+        class="bg-white p-4 rounded shadow">
+        <div class="mb-4">
+          <label for="csvfile" class="block mb-1">CSV File:</label>
+          <input
+            type="file"
+            name="csvfile"
+            id="csvfile"
+            accept=".csv"
+            class="w-full px-3 py-2 border rounded"
+            required />
+        </div>
+        <div class="mb-4">
+          <label for="question" class="block mb-1">Question:</label>
+          <input
+            type="text"
+            name="question"
+            id="question"
+            placeholder="Enter your question"
+            class="w-full px-3 py-2 border rounded"
+            required />
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+          Upload
+        </button>
+        <div class="loader mt-2"></div>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById('upload-form')
+        .addEventListener('submit', function () {
+          document.querySelector('.loader').style.display = 'inline-block';
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSV Analysis Results</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <style>
+      .analysis-text {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-16" style="max-width: 800px;">
+      <h1 class="text-4xl font-semibold mb-4">CSV Analysis Results</h1>
+      <div class="bg-white p-4 rounded shadow">
+        <div class="analysis-text"><%- analysis %></div>
+      </div>
+      <a href="/" class="block mt-4 text-blue-500">Upload another CSV</a>
+    </div>
+  </body>
+</html>
