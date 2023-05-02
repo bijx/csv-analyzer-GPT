@@ -28,8 +28,11 @@ npm install
 
 3. Rename the `config.template.json` file in the root directory of the project to `config.json` and add your GPT-4 API key:
 
-```ini
-OPENAI_AUTH=your_gpt4_api_key
+```json
+{
+  "OPENAI_AUTH": "your-api-key-here",
+  "GPT_MODEL": "gpt-4"
+}
 ```
 
 Optionally, you can also choose which version of GPT you wish to use, as `gpt-3.5-turbo` is just as good at handling simple queries.
