@@ -1,5 +1,7 @@
 # CSV Analyzer with GPT-4
 
+**CONTEXT (NOV 2023):** This application was originally developed before Code Interpreter was released by OpenAI so users could still have ChatGPT interact with their spreadsheets.
+
 This application provides a simple interface for users to upload CSV files or spreadsheets, input a question, and receive an answer from GPT-4 about the data in the sheets. The application uses Express.js as the backend framework and EJS for server-side rendering of the views. The CSV file is previewed on the client side before being uploaded and analyzed by GPT-4.
 
 ## Getting Started
